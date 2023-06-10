@@ -5,7 +5,6 @@
 ## Dataset
 
 Dataset yang digunakan adalah "thelook_ecommerce" yang tersedia di platform [BigQuery](https://console.cloud.google.com/bigquery?project=rock-wonder-317907&ws=!1m4!1m3!3m2!1sbigquery-public-data!2sthelook_ecommerce). Dataset ini terdiri dari beberapa tabel yang saling terhubung, antara lain "inventory_items" dan "order_items". Tabel "inventory_items" berisi informasi tentang produk-produk yang tersedia dalam inventaris toko, seperti ID produk, harga, kategori, nama produk, dan lainnya. Tabel "order_items" berisi detail transaksi, termasuk ID produk, status transaksi, tanggal pengiriman, harga penjualan, dan lainnya.
-Berikut adalah deskripsi atribut yang terdapat dalam dataset ini:
 
 ## Objective
 
