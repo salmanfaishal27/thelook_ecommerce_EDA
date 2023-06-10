@@ -12,23 +12,42 @@ Berikut adalah deskripsi atribut yang terdapat dalam dataset ini:
 Tujuan dari menggunakan dataset "thelook_ecommerce" ini adalah untuk melakukan analisis terhadap permasalahan “Shipping and Stock Performance Review on Q1 - Q2 2023”.
 
 ## Query Filtering
-SELECT
+**SELECT**
+
        a.product_id, 
+
        b.inventory_item_id, 
+
        b.status, 
+
        b.created_at, 
+
        b.shipped_at,
+
        b.delivered_at,
+
        b.returned_at, 
+
        b.sale_price,
+
        a.cost,
+
        a.product_category,
+
        a.product_name,
+
        a.product_retail_price,
+
        a.product_department,
+
        a.product_distribution_center_id
-FROM `bigquery-public-data.thelook_ecommerce.inventory_items` a
-INNER JOIN `bigquery-public-data.thelook_ecommerce.order_items` b
-ON a.id = b.inventory_item_id
-WHERE b.shipped_at BETWEEN '2023-01-01' AND '2023-06-30'
+
+**FROM** `bigquery-public-data.thelook_ecommerce.inventory_items` **a**
+
+**INNER JOIN** `bigquery-public-data.thelook_ecommerce.order_items` **b**
+
+**ON a.id = b.inventory_item_id**
+
+**WHERE b.shipped_at BETWEEN '2023-01-01' AND '2023-06-30'**
+
       AND EXTRACT(YEAR FROM b.shipped_at) = 2023
